@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const logout = () => {
+    const login = () => {
         localStorage.removeItem("signUp");
         window.location.reload();
     }
 
-    const deleteAccount = () => {
+    const back = () => {
         localStorage.clear();
         window.location.reload();
     }
@@ -19,8 +19,8 @@ const Home = () => {
             <h1>Home</h1>
 
            
-            <button onClick={logout} className='logout'>1</button>
-            <button onClick={deleteAccount} className='delete'>Back to sign in</button>
+            <button onClick={login} className='login'>1</button>
+            <button onClick={back} className='back'>Back to sign in</button>
             <h1>Some content here</h1>
         </div>
     );
